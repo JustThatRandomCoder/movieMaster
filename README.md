@@ -10,3 +10,5 @@ MovieMaster nutzt die API von OMDb (Open Movie Database), um umfassende und aktu
 # Über Movie Master
 
 MovieMaster ist Teil der dritten Aufgabe des "Minihackathons" von Kevin Chromik und dient nicht kommerziellen Zwecken. MovieMaster wurde von Folgenden Personen entwickelt: Julius Grimm war für das Design verantwortlich und schrieb zusammen mit mischka12 den Frontend-Code. Das Backend wurde von Tryzen95 programmiert, um eine stabile und effiziente Datenverarbeitung zu gewährleisten. Ziel von MovieMaster ist es, eine benutzerfreundliche Plattform bereitzustellen, die detaillierte Informationen zu den besten Filmen, aktuellen Kinocharts und top-bewerteten Filmen bietet. Obwohl das Projekt nicht kommerziell genutzt wird, hat es den Entwicklern ermöglicht, ihre Fähigkeiten zu erweitern und eine hochwertige Anwendung zu schaffen.
+
+![MovieMaster Showcase](./movieMasterShowcase.png)
