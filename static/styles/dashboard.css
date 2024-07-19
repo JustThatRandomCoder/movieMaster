@@ -131,6 +131,71 @@ nav:hover {
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.moviePosterImg {
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.PopUpMoviePoster {
+    width: 10rem;
+    background-color: var(--container-color);
+    width: 20rem;
+    height: 28rem;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.popUpSection {
+    padding: 2rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popUpInner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.popUpInformationCo {
+    margin-left: 2rem;
+}
+
+.popUpHeadline {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.ratingCo {
+    margin-top: 1rem;
+}
+
+.rating {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.colored {
+    color: var(--primary-color);
+}
+
+.genre, .published {
+    margin-top: 2rem;
 }
 
 @media screen and (max-width: 557px) {
@@ -145,5 +210,10 @@ nav:hover {
 
     .headerRightCo {
         justify-content: left;
+    }
+
+    .popUpInformationCo {
+        margin-left: 0rem;
+        margin-top: 2rem;
     }
 }
