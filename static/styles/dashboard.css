@@ -105,6 +105,10 @@ nav:hover {
     width: 2rem;
 }
 
+.moviePosterImg {
+    width: 8rem;
+}
+
 .movie {
     background-color: var(--container-color);
     width: 8rem;
@@ -127,4 +131,19 @@ nav:hover {
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
+}
+
+@media screen and (max-width: 557px) {
+    .headerLeftCo {
+        display: none;
+    }
+
+    .searchBar {
+        width: 100%;
+        
+    }
+
+    .headerRightCo {
+        justify-content: left;
+    }
 }

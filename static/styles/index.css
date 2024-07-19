@@ -1,0 +1,177 @@
+body {
+    background-color: var(--background-color);
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+    margin: 0;
+}
+
+:root {
+    --background-color: #050505;
+    --container-color: #111115;
+    --text-color: #F2E9FC;
+    --primary-color: #6C6C93;
+    --tartiary-color: #31313E;
+    --secondary-color: #212150;
+    --accent-color: #513253;
+}
+
+.headerImg {
+    width: 3rem;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headerLeftCo, .headerTextCo {
+    display: flex;
+    flex-direction: row;
+}
+
+.headerTextCo {
+    width: 15rem;
+    justify-content: space-evenly;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+nav {
+    transition: color 0.3s ease;
+    cursor: grab;
+}
+
+nav:hover {
+    color: var(--tartiary-color);
+}
+
+.mainAlignment {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.main {
+    max-width: 80rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link {
+    color: var(--text-color);
+}
+
+.landingImg {
+    width: 25rem;
+}
+
+.textlandingpage {
+    text-align: left;
+    max-width: 27rem;
+    margin-left: 3rem;
+}
+
+.landingHeadline {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.Absatz {
+    font-size: 1rem;
+}
+
+.button1 {
+    background-color: var(--primary-color);
+    font-size: 3rem;
+    margin-top: 2rem;
+    border-radius: 0.4rem;
+    border: none;
+    width: 16.5rem;
+    height: 3rem;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+    color: var(--background-color);
+}
+
+.button1:hover {
+    background-color: var(--tartiary-color);
+}
+
+.buttontext {
+    font-size: 1rem;
+}
+
+.Absatz1, .Absatz2, .Absatz3 {
+    background-color: var(--container-color);
+    width: 80%;
+    max-width: 80rem !important;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.3rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.Überschrift1, .Überschrift2, .Überschrift3 {
+    margin-top: -0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+    font-weight: 500;
+}
+
+.Absatztext1 , .Absatztext2, .Absatztext3 {
+    font-size: 1rem;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 557px) {
+    .landingHeadline {
+        font-size: 2.5rem;
+    }
+
+    .landingImg {
+        width: 18rem;
+    }
+    
+    .textlandingpage {
+        width: 19rem;
+    }
+
+    .infoAlignment {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 879px) {
+    .textlandingpage {
+        margin-top: 3rem;
+        margin-left: 0rem;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -19,8 +19,8 @@
         <div class="headerLeftCo">
             <img class="headerImg" src="/static/images/movieMasterLogo.png" onclick="location.href='home'">
             <div class="headerTextCo">
-                <nav>Home</nav>
-                <nav>Filme</nav>
+                <nav onclick="location.href='home'">Home</nav>
+                <nav onclick="location.href='dashboard'">Filme</nav>
             </div>
         </div>
         <div class="headerRightCo">
@@ -30,27 +30,33 @@
             </div>
         </div>
     </header>
+    <section id="maincontainer" class="categorie categorie1">
+        <div class="headline">Unser Top 10 Empfehlungen auf Netflix</div>
+        <div id="tenrandomFilms" class="movieContentCo">
+
+        </div>
+    </section>
     <section class="categorie categorie1">
-        <div class="headline">Kategorie 1</div>
-        <div class="movieContentCo">
-            <div class="movieCo">
-                <div class="movie">
-                    <div class="moviePoster">
-                        <img class="moviePlaceholderImg" src="/static/images/moviePosterIcon.png">
-                    </div>
-                </div>
-                <div class="moviewTitle">Film 1</div>
-            </div>
-            <div class="movieCo">
-                <div class="movie">
-                    <div class="moviePoster">
-                        <img class="moviePlaceholderImg" src="/static/images/moviePosterIcon.png">
-                    </div>
-                </div>
-                <div class="moviewTitle">Film 2</div>
-            </div>
+        <div class="headline">Deine Suche</div>
+        <div id="searchcontainer" class="movieContentCo">
+
         </div>
     </section>
 </body>
+<script>
+    const knownMovies = [
+        'Madame Web',
+        'Matrix Resurrections',
+        'Dexter',
+        'Crooks',
+        'King of Stonks',
+        'The Billion Dollar Code',
+        'You People',
+        'resident alien',
+        'The Blacklist',
+        'Beverly Hills Cop Axel F'
+    ];
+    const _0x40773e = _0x3a3e; (function (_0x2b06f7, _0x14aeed) { const _0x42e042 = _0x3a3e, _0x333ef5 = _0x2b06f7(); while (!![]) { try { const _0x129ab7 = parseInt(_0x42e042(0x116)) / 0x1 * (-parseInt(_0x42e042(0x122)) / 0x2) + -parseInt(_0x42e042(0x103)) / 0x3 * (parseInt(_0x42e042(0x10b)) / 0x4) + -parseInt(_0x42e042(0x100)) / 0x5 + -parseInt(_0x42e042(0x117)) / 0x6 + -parseInt(_0x42e042(0x107)) / 0x7 + -parseInt(_0x42e042(0x105)) / 0x8 + parseInt(_0x42e042(0x124)) / 0x9 * (parseInt(_0x42e042(0x119)) / 0xa); if (_0x129ab7 === _0x14aeed) break; else _0x333ef5['push'](_0x333ef5['shift']()); } catch (_0x22af4c) { _0x333ef5['push'](_0x333ef5['shift']()); } } }(_0x25e6, 0xce8f7)); const apiKey = _0x40773e(0x123); document[_0x40773e(0x118)](_0x40773e(0x112))[_0x40773e(0x11e)]('input', async _0x1ea4c4 => { const _0x18da51 = _0x40773e, _0x56f75f = _0x1ea4c4['target'][_0x18da51(0x106)][_0x18da51(0x11f)](); _0x56f75f ? await searchMovies(_0x56f75f) : clearSearchResults(); }); async function fetchMoviesByTitle(_0x166c81) { const _0xb62658 = _0x40773e, _0x4b1c2a = await fetch(_0xb62658(0x10a) + encodeURIComponent(_0x166c81) + _0xb62658(0x109) + apiKey), _0x516a99 = await _0x4b1c2a['json'](); return _0x516a99; } async function displayRandomMovies() { const _0x34b21c = _0x40773e, _0x22d4fe = document[_0x34b21c(0x118)](_0x34b21c(0xfd)); _0x22d4fe[_0x34b21c(0x11a)] = ''; for (const _0x32f9ed of knownMovies) { const _0x45f866 = await fetchMoviesByTitle(_0x32f9ed); if (_0x45f866['Response'] === _0x34b21c(0x121)) { const _0x397bb6 = document[_0x34b21c(0x104)](_0x34b21c(0x110)); _0x397bb6[_0x34b21c(0x10f)][_0x34b21c(0x10c)](_0x34b21c(0x113)), _0x397bb6[_0x34b21c(0x11a)] = _0x34b21c(0x11c) + (_0x45f866[_0x34b21c(0x108)] !== _0x34b21c(0xfe) ? _0x45f866[_0x34b21c(0x108)] : '/static/images/moviePosterIcon.png') + _0x34b21c(0x11d) + _0x45f866['Title'] + _0x34b21c(0x10e), _0x22d4fe[_0x34b21c(0xfc)](_0x397bb6); } } } async function searchMovies(_0x21c1fa) { const _0x48ae17 = _0x40773e; try { const _0x316152 = await fetch(_0x48ae17(0x101) + _0x21c1fa + _0x48ae17(0x109) + apiKey), _0x165a09 = await _0x316152[_0x48ae17(0x125)](); _0x165a09[_0x48ae17(0xfa)] === 'True' ? displayMovies(_0x165a09[_0x48ae17(0x10d)]) : clearSearchResults(); } catch (_0x1fd80e) { console[_0x48ae17(0x11b)]('Fehler\x20bei\x20der\x20Abfrage\x20der\x20API:', _0x1fd80e); } } function _0x3a3e(_0x534ca7, _0x45465b) { const _0x25e62f = _0x25e6(); return _0x3a3e = function (_0x3a3e97, _0x552324) { _0x3a3e97 = _0x3a3e97 - 0xfa; let _0x1da095 = _0x25e62f[_0x3a3e97]; return _0x1da095; }, _0x3a3e(_0x534ca7, _0x45465b); } function displayMovies(_0x34852e) { const _0x15cd3c = _0x40773e, _0x19fefb = document[_0x15cd3c(0x118)](_0x15cd3c(0xfb)); _0x19fefb['innerHTML'] = '', _0x34852e[_0x15cd3c(0x120)](_0x4f2673 => { const _0x4eda22 = _0x15cd3c, _0x1ef94d = document[_0x4eda22(0x104)](_0x4eda22(0x110)); _0x1ef94d['classList'][_0x4eda22(0x10c)](_0x4eda22(0x113)), _0x1ef94d[_0x4eda22(0x11a)] = '\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22movie\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22moviePoster\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20class=\x22moviePosterImg\x22\x20src=\x22' + (_0x4f2673[_0x4eda22(0x108)] !== _0x4eda22(0xfe) ? _0x4f2673[_0x4eda22(0x108)] : _0x4eda22(0xff)) + _0x4eda22(0x111) + _0x4f2673[_0x4eda22(0x114)] + _0x4eda22(0x115), _0x19fefb['appendChild'](_0x1ef94d); }); } function clearSearchResults() { const _0x4793e4 = _0x40773e, _0x4d707b = document[_0x4793e4(0x118)](_0x4793e4(0xfb)); _0x4d707b[_0x4793e4(0x11a)] = ''; } function _0x25e6() { const _0x29d64e = ['Title', '</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20', '13caPHDA', '3270714FlDgBs', 'getElementById', '71292910uYWVzs', 'innerHTML', 'error', '\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22movie\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22moviePoster\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20class=\x22moviePosterImg\x22\x20src=\x22', '\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22moviewTitle\x22>', 'addEventListener', 'trim', 'forEach', 'True', '25140RukpQC', '282752d7', '9TbIIsN', 'json', 'Response', 'searchcontainer', 'appendChild', 'tenrandomFilms', 'N/A', '/static/images/moviePosterIcon.png', '8343630JkmHzM', 'http://www.omdbapi.com/?s=', 'onload', '3902508QWEeWr', 'createElement', '9388864GpcIQo', 'value', '10020647ZnWRqI', 'Poster', '&apikey=', 'http://www.omdbapi.com/?t=', '4fhwmRj', 'add', 'Search', '</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20', 'classList', 'div', '\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22moviewTitle\x22>', 'search-input', 'movieCo']; _0x25e6 = function () { return _0x29d64e; }; return _0x25e6(); } window[_0x40773e(0x102)] = () => { displayRandomMovies(); };
+</script>
 
 </html>
