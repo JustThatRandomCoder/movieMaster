@@ -145,7 +145,7 @@ nav:hover {
 
 .PopUpMoviePoster {
     width: 10rem;
-    background-color: var(--container-color);
+    background-color: var(--background-color);
     width: 20rem;
     height: 28rem;
     border-radius: 5px;
@@ -155,21 +155,23 @@ nav:hover {
     text-align: center;
 }
 
-.popUpSection {
-    padding: 2rem;
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
+.popUpImg {
+    border-radius: 5px;
 }
 
 .popUpInner {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: auto;
 }
 
 .popUpInformationCo {
     margin-left: 2rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .popUpHeadline {
@@ -188,6 +190,7 @@ nav:hover {
     width: 10rem;
     justify-content: space-between;
     font-size: 1.5rem;
+    color: var(--primary-color);
 }
 
 .colored {
@@ -197,6 +200,27 @@ nav:hover {
 .genre, .published {
     margin-top: 2rem;
 }
+
+.popUpSection {
+    padding: 2rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--background-color);
+    padding: 2rem;
+}
+
+button {
+    position: absolute;
+    margin-top: 25.5rem;
+    margin-left: 22rem;
+    padding: 0rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
 
 @media screen and (max-width: 557px) {
     .headerLeftCo {
@@ -215,5 +239,23 @@ nav:hover {
     .popUpInformationCo {
         margin-left: 0rem;
         margin-top: 2rem;
+    }
+
+    button {
+        position: static;
+        margin-top: 2rem;
+        margin-left: 0rem;
+    }
+
+    .popUpAlignment  {
+        margin-top: 0rem;
+        padding-top: 4rem;
+        height: 100vh;
+        padding-bottom: 4rem;
+    }
+
+    .popUpSection {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 }
